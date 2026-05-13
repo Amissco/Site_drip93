@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vestes — Drip 93</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Drip 93 — Accueil">
+        <svg class="logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="40" cy="40" r="29" stroke="currentColor" stroke-width="0.4"/>
+          <text x="40" y="36" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="currentColor" text-anchor="middle" letter-spacing="5">DRIP</text>
+          <text x="40" y="57" font-family="Arial Black, Arial, sans-serif" font-size="23" font-weight="900" fill="currentColor" text-anchor="middle" letter-spacing="2">93</text>
+        </svg>
+        <span class="logo-name">Drip 93</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="catalogue.html" class="active">Catalogue</a>
+      </nav>
+      <div class="header-right">
+        <button class="cart-toggle" onclick="toggleCart()" aria-label="Ouvrir le panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        <button class="menu-toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <a href="index.html" onclick="closeMenu()">Accueil</a>
+    <a href="catalogue.html" onclick="closeMenu()">Catalogue</a>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="catalogue.html" class="back-link">Catalogue</a>
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1>Vestes</h1>
+          <p>Mode Homme</p>
+        </div>
+        <div class="page-header-right">8 articles</div>
+      </div>
+      <div class="product-grid">
+
+        <div class="product-card" data-name="Veste anthracite" data-price="70" data-image="images/IMG_2722.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2722.jpeg')">
+            <img src="images/IMG_2722.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste anthracite</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-name="Veste dust gray" data-price="70" data-image="images/IMG_2730.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2730.jpeg')">
+            <img src="images/IMG_2730.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste dust gray</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-name="Veste blanche" data-price="70" data-image="images/IMG_2731.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2731.jpeg')">
+            <img src="images/IMG_2731.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste blanche</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-name="Veste noire" data-price="70" data-image="images/IMG_2732.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2732.jpeg')">
+            <img src="images/IMG_2732.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste noire</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-name="Veste bleu clair" data-price="70" data-image="images/IMG_2733.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2733.jpeg')">
+            <img src="images/IMG_2733.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste bleu clair</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-name="Veste kaki" data-price="70" data-image="images/IMG_2734.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2734.jpeg')">
+            <img src="images/IMG_2734.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste kaki</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-name="Veste avion bleu" data-price="70" data-image="images/IMG_2735.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2735.jpeg')">
+            <img src="images/IMG_2735.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste avion bleu</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card" data-name="Veste gris chiné" data-price="70" data-image="images/IMG_2736.jpeg">
+          <div class="product-card-img" onclick="openLightbox('images/IMG_2736.jpeg')">
+            <img src="images/IMG_2736.jpeg" alt="Vêtement" />
+          </div>
+          <p class="product-card-name">Veste gris chiné</p>
+          <div class="product-card-meta">
+            <p class="product-card-price">70 €</p>
+            <div class="product-card-sizes">
+              <span>S</span><span>M</span><span>L</span>
+            </div>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCartFromCard(this)">Ajouter au panier</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Drip 93</p>
+      <p>Mode Homme</p>
+    </div>
+  </footer>
+
+  <script src="lightbox.js"></script>
+  <script src="cart.js"></script>
+  <script>
+    function toggleMenu() { document.getElementById('mobileNav').classList.toggle('open'); }
+    function closeMenu() { document.getElementById('mobileNav').classList.remove('open'); }
+    document.addEventListener('click', function (e) {
+      const nav    = document.getElementById('mobileNav');
+      const toggle = document.querySelector('.menu-toggle');
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) nav.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>
