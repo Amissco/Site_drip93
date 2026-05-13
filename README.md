@@ -10,7 +10,7 @@ Site web catalogue de vêtements permettant de parcourir les articles disponible
 ## Technologies utilisées
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (avec claude)
 
 ## Voir le site en ligne
 [marvelous-madeleine-8e5d76.netlify.app](https://marvelous-madeleine-8e5d76.netlify.app/)
